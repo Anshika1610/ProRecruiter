@@ -1,0 +1,357 @@
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.nav {
+    width: 100%;
+    height: 20vhh;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 30vh;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #0A4C9C;
+    font-family: 'Calibri';
+    font-size: 3vh;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    font-family: 'Calibri';
+    padding-bottom: 40px;
+    display: flex;
+}
+
+.content .first-line {
+    width: 50%;
+}
+
+.content .first-line h1 {
+    padding-left: 20vw; 
+    font-size: 8vh;
+}
+
+.content .first-line h1 .second-line {
+    color: #0A4C9C;
+}
+
+.content .welcome-content {
+    flex-grow: 1;
+}
+
+@media only screen and (min-width: 480px){
+    .content .welcome-content h1 {
+        font-size: 4vh; 
+        padding-top: 12vh;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .content .welcome-content h1 {
+        font-size: 4vh; 
+        padding-top: 70vh;
+    }
+}
+
+
+.content .welcome-content p {
+    font-size: 3vh;
+}
+
+hr {
+    height:5px;
+    width: 90%;
+    border-width:0;
+    background-color:#0A4C9C;
+  }
+
+.help {
+    padding-bottom: 40px;
+}
+
+.help h2 {
+    color: #0A4C9C;
+    text-align: center;
+    font-size: 6vh;
+    padding-top: 40px;
+}
+
+.help img {
+    width: 40vh;
+    height: 10vh;
+}
+
+.help .logo1 {
+    padding-left: 60px;
+}
+
+.help p {
+    font-family: 'Calibri';
+    font-size: 3vh;
+}
+
+.help .p1 {
+    padding-left: 120px;
+}
+
+.help .logo2 {
+    padding-left: 50%;
+}
+
+.help .p2 {
+    padding-left: 55%;
+}
+
+.help .logo3 {
+    padding-left: 60px;
+    width: 28vh;
+}
+
+.help .logo4 {
+    padding-left: 50%;
+    width: 30vh;
+}
+
+.help .p3 {
+    padding-left: 120px;
+}
+
+.help .p4 {
+    padding-left: 55%;
+}
+
+.contact h2 {
+    color: #0A4C9C;
+    text-align: center;
+    font-size: 6vh;
+    padding-top: 40px;
+}
+
+.contact img {
+    width: 80%;
+    height: 10%;
+    padding-left: 10%;
+    padding-bottom: 40px;
+}
+
+
+.footer {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 60px;
+	background-color: #0A4C9C;
+    margin-top: auto;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 15px;
+    color: #fff;
+}
+
+.footer-login p {
+    margin-top: 25px;
+	font-size: 15px;
+    color: #fff;
+}
+
+.footer-login {
+    position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 60px;
+	background-color: #0A4C9C;
+    bottom: 0%;
+}
+
+.container-forms {
+    height: 70vh;
+    width: 70%;
+    background-color: #0A4C9C;
+    margin-left: 15%;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-login {
+    background: white;
+    padding: 40px;
+    height: 45vh;
+    width: 40%;
+}
+
+.form-signup {
+    background: white;
+    padding: 40px;
+    height: 55vh;
+    width: 40%;
+}
+
+header {
+    font-size: 40px;
+    text-align: center;
+    color: #0A4C9C;
+    text-decoration: underline;
+    padding-bottom: 5px;
+    font-weight: 1000;
+    font-family: 'Calibri';
+}
+
+.form-link {
+    font-family: 'Calibri';
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
+    margin-top: 25px;
+}
+
+.form-link .sign {
+    color: #0A4C9C;
+}
+
+form .field {
+    height: 45px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.field input {
+    height: 80%;
+    width: 90%;
+    margin-left: 5%;
+    border: none;
+    background-color: #F0EFEF;
+    color: black;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 5%;
+}
+
+.field button {
+    background-color: #0A4C9C;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 7px;
+    margin-top: 5px;
+    height: fit-content;
+    width: 40%;
+    border: none;
+    border-radius: 5%;
+    align-items: center;
+    margin-left: 30%;
+    font-size: 19px;
+}
+
+
+
+.field button:hover {
+    cursor: pointer;
+}
+
+.myTable {
+    font-family: 'Calibri';
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 40px;
+    height: 50vh;
+    font-size: 25px;
+    padding-right: 25px;
+    margin-left: 100px;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.myInput {
+    margin-left: 100px;
+    margin-top: 40px;
+    width: 80%;
+    height: 4vh;
+}
+
+.fetched-button {
+    background-color: #0A4C9C;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 7px;
+    margin-top: 5px;
+    height: fit-content;
+    width: 40%;
+    border: none;
+    border-radius: 5%;
+    align-items: center;
+    margin-left: 30%;
+    font-size: 19px;
+}
+
+.fetched-button:hover {
+    cursor: pointer;
+}
+
+.fetched {
+    align-items: center;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.title {
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+.footer-logged {
+    position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 60px;
+	background-color: #0A4C9C;
+}
+
+.footer-logged p {
+    margin-top: 25px;
+	font-size: 15px;
+    color: #fff;
+}

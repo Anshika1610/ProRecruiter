@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ProRecruiter</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <body>
+    <div class="nav">
+        <div class="navbar">
+            <a href="/logged"><img src="images/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="/logged">Home</a></li>
+                <li><a>Welcome <%= welname %></a></li>
+                <li><a href="/"><b>Logout</b></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <input type="text" name="" class="myInput" id="myInput" placeholder="Search" onkeyup="searchFun()">
+        <table class="myTable" id="myTable">
+            <tr class="header">
+                <th>&nbsp;</th>
+                <th style="width: 25%">Name</th>
+                <th style="width: 25%">Job Role</th>
+                <th style="width: 25%">Contact</th>
+                <th style="width: 25%">Location</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>Vinod</td>
+                <td>SDE</td>
+                <td>9122456789</td>
+                <td>Delhi</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>Simran</td>
+                <td>HR</td>
+                <td>9022345455</td>
+                <td>Mumbai</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>Shalini</td>
+                <td>Backend Developer</td>
+                <td>9156235411</td>
+                <td>Chennai</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>Priyank</td>
+                <td>SDE</td>
+                <td>7016302448</td>
+                <td>Delhi</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>Shreya</td>
+                <td>HR</td>
+                <td>7016223288</td>
+                <td>Delhi</td>
+            </tr>
+        </table>
+
+        <input type="button" value="Show Fetched Data" class="fetched-button" onclick="GetSelected()" />
+        <h3 class="title">Name&emsp;Job&emsp;Contact&emsp;Location</h3>
+        <div class="fetched" id="fetched">
+        </div>
+
+
+    </div>
+
+
+    <script>
+        const searchFun = () => {
+            let filter = document.getElementById('myInput').value.toUpperCase();
+            let myTable = document.getElementById('myTable');
+            let tr = myTable.getElementsByTagName('tr')
+
+            for(var i=0; i<tr.length; i++){
+                let td1 = tr[i].getElementsByTagName('td')[2];
+
+                let td2 = tr[i].getElementsByTagName('td')[4];
+
+                if(td1 || td2){
+                    let textvalue1 = td1.textContent || td1.innerHTML;
+                    let textvalue2 = td2.textContent || td2.innerHTML;
+
+                    if(textvalue1.toUpperCase().indexOf(filter)>-1 || textvalue2.toUpperCase().indexOf(filter)>-1){
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        function GetSelected() {
+
+            var grid = document.getElementById("myTable");
+            var count = 0;
+
+            const dataContainer = document.getElementById('fetched');
+    
+            var checkBoxes = grid.getElementsByTagName("INPUT");
+            var message = "\n"
+            dataContainer.innerHTML="";
+    
+            for (var i = 0; i < checkBoxes.length; i++) {
+                if (checkBoxes[i].checked) {
+                    const paragraph = document.createElement('p');
+                    var row = checkBoxes[i].parentNode.parentNode;
+                    message += row.cells[1].innerHTML;
+                    message += "-----" + row.cells[2].innerHTML;
+                    message += "-----" + row.cells[3].innerHTML;
+                    message += "-----" + row.cells[4].innerHTML;
+                    message += "\n";
+                    paragraph.textContent = message;
+                    dataContainer.appendChild(paragraph);
+                }
+                message = "";
+
+            }
+        
+        }
+
+        window.onload = GetSelected;
+
+    </script>
+
+<div class="footer-logged">
+    <p>© 2023 ProRecruiter. All rights reserved.</p>
+</div>
+</body>
+</html>
